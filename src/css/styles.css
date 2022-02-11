@@ -1,0 +1,18 @@
+.content{
+  background-color:rgb(235, 228, 228);
+  max-width: 70em;
+  margin:auto;
+  color: white;
+}
+.container {
+  background-image: url(../assets/images/exchange.jpeg);
+  text-align: center;
+  min-height: 20em;
+}
+h1{
+  font-style: italic;
+}
+select {
+  min-width: 8em;
+  padding-left: .3em;
+}

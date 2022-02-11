@@ -1,0 +1,56 @@
+<html lang="en-US">
+<head>
+  <title>Currency Exchange</title>
+</head>
+<body>
+  <div class="content">
+    <div class="container">
+      <h1>Currency Exchange</h1>
+      <p>We do the math so you don't have to</p>
+      <div class="row">
+        <div class="col-md-6">
+          <select id="baseCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="AED">AED</option>
+            <option value="ANG">ANG</option>
+            <option value="AFN">AFN</option>
+            <option value="ALL">ALL</option>
+            <option value="AOA">AOA</option>
+            <option value="ARS">ARS</option>
+            <option value="AUD">AUD</option>
+            <option value="AZN">AZN</option>
+            <option value="BAM">BAM</option>
+            <option value="BTN">BTN</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <select id="convertedCurrency">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="AED">AED</option>
+            <option value="ANG">ANG</option>
+            <option value="AFN">AFN</option>
+            <option value="ALL">ALL</option>
+            <option value="AOA">AOA</option>
+            <option value="ARS">ARS</option>
+            <option value="AUD">AUD</option>
+            <option value="AZN">AZN</option>
+            <option value="BAM">BAM</option>
+            <option value="BTN">BTN</option>
+          </select>
+        </div>
+        <div>
+          <input id="baseAmount" placeholder="Base amount" type="number">
+          <div class="resultDisplay">
+            <div class="rate"></div>
+            <div class="converted"></div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-success" id="makeExchange">Exchange</button>
+      <div id="error"></div>
+    </div>
+  </div>
+</body>
+</html>
