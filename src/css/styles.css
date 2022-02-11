@@ -2,7 +2,7 @@
   background-color:rgb(235, 228, 228);
   max-width: 70em;
   margin:auto;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .container {
   background-image: url(../assets/images/exchange.jpeg);
