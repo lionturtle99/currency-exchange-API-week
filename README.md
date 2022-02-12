@@ -1,14 +1,22 @@
-# _title_
+# _Currency Exchange_
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 #### By _**Liam Eller**_
 
-#### _brief description_
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
+#### _An app practicing API calls and ES6 features_
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 ## Technologies Used
 
 * _Javascript_
 * _html5_
 * _css_
+* _jquery_
+* _bootstrap_
 * _npm_
 * _webpack_
 * _jest_
@@ -16,10 +24,13 @@
 * _babel_
 * _git_
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 ## Description
 
-_more detailed description._
+_Epicodus independent project: Currency exchange website using the [ExchangeRate-API](https://www.exchangerate-api.com/)_
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 ## Setup & Installation Instructions
 
@@ -36,12 +47,16 @@ _more detailed description._
 
 _Visit the [ExchangeRate-API](https://www.exchangerate-api.com/) site. Input your email address and click the "Get Free Key" button. You'll be prompted to create an account with your email, first name and password. Agree to the terms of use and click "Get Started!" At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month. Next in the root directory, create a ".env" file to store the API key. The API key should look like this: API_KEY=(your API key)._
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+
 ## Known Bugs
 
 _None_
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 ## License
 
 _[MIT](https://opensource.org/licenses/MIT)_
 
-Copyright (c) _date:_ _by: Liam Eller_
+Copyright (c) _date: 2/11/22_ _by: Liam Eller_
