@@ -1,9 +1,5 @@
 export default class ExchangeService {  
   static makeExchange(base, exchange, amount){
-    console.log(base);
-    console.log(exchange);
-    console.log(amount);
-    console.log(process.env.API_KEY);
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${base}/${exchange}/${amount}`)
     .then(function(response) {
       if(!response.ok) {

@@ -3,12 +3,14 @@
   <title>Currency Exchange</title>
 </head>
 <body>
-  <div class="content">
-    <div class="container">
+  <div class="container">
+    <div class="jumbotron">
       <h1>Currency Exchange</h1>
-      <p>We do the math so you don't have to</p>
+    </div>
+    <div class="display">
       <div class="row">
-        <div class="col-md-6">
+        <p>We do the math for you so you don't have to</p>
+        <div class="col-md-4">
           <select id="baseCurrency">
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
@@ -24,7 +26,10 @@
             <option value="BTN">BTN</option>
           </select>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
+          <input id="baseAmount" placeholder="Base amount" type="number">
+        </div>
+        <div class="col-md-4">
           <select id="convertedCurrency">
             <option value="EUR">EUR</option>
             <option value="USD">USD</option>
@@ -40,17 +45,73 @@
             <option value="BTN">BTN</option>
           </select>
         </div>
-        <div>
-          <input id="baseAmount" placeholder="Base amount" type="number">
-        </div>
       </div>
-      <button class="btn btn-success" id="makeExchange">Exchange</button>
-      <div class="resultDisplay">
+      <div>
+        <div class="results">
+          <div class="output">The exchanged amount is: <span id="converted"></span></div>
+          <div class="output">The exchange rate is: <span id="rate"></span></div>
+        </div>
+        <div>
+          <button class="btn btn-info" id="makeExchange">Exchange</button>
+        </div>
         <div id="error"></div>
-        <div id="converted"></div>
-        <div id="rate"></div>
       </div>
     </div>
-  </div>
-</body>
-</html>
+    <div>
+      <div class="header">
+        <h2>Supported Currencies</h2>
+        <p>List of all currency codes, name of currency and country of origin supported here</p>
+      </div>
+      <div class="money-grid">
+        <div class="code">
+          <ul>
+            <li>USD</li>
+            <li>EUR</li>
+            <li>AED</li>
+            <li>ANG</li>
+            <li>AFN</li>
+            <li>ALL</li>
+            <li>AOA</li>
+            <li>ARS</li>
+            <li>AUD</li>
+            <li>AZN</li>
+            <li>BAM</li>
+            <li>BTN</li>
+          </ul>
+        </div>
+        <div class="name">
+          <ul>
+            <li>United States Dollar</li>
+            <li>Euro</li>
+            <li>AED Dirham</li>
+            <li>Netherlands Antillian Guilder</li>
+            <li>Afghan Afghani</li>
+            <li>Albanian Lek</li>
+            <LI>Angolan Kwanza</LI>
+            <li>Argentine Peso</li>
+            <li>Australian Dollar</li>
+            <li>Azerbaijani Manat</li>
+            <li>Bosnia and Herzegovina Mark</li>
+            <li>Bhutanese Ngultrum</li>
+          </ul>
+        </div>
+        <div class="origin">
+          <ul>
+            <li>United States of America</li>
+            <li>European Union</li>
+            <li>United Arab Emirates</li>
+            <li>Netherlands Antilles</li>
+            <li>Afghanistan</li>
+            <li>Albania</li>
+            <LI>Angola</LI>
+            <li>Argentina</li>
+            <li>Australia</li>
+            <li>Azerbaijan</li>
+            <li>Bosnia and Herzegovina</li>
+            <li>Bhutan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>

@@ -1,8 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-// const Dotenv = require('dotenv-webpack');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -12,22 +11,53 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist')
-    }
+    contentBase: './dist'
   },
   plugins: [
+    new Dotenv(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'TITLE HERE',
+      title: 'Shape Tracker',
       template: './src/index.html',
       inject: 'body'
-    }),
-    new ESLintPlugin(),
-    // new Dotenv()
+    })
   ],
   module: {
     rules: [
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/',
+              esModule: false
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(mp4|webm)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets/videos//',
+        }
+      },
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
+      },
+      // {
+      //   test: /\.(ogg|mp3|wav|mpe?g)$/,
+      //   type: 'asset/resource',
+      //   generator: {
+      //     filename: 'assets/audio/[hash][ext]'
+      //   }
+      // },
       {
         test: /\.css$/,
         use: [
@@ -36,24 +66,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpe?g|png|gif)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/images/[hash][ext]'
-        }
-      },
-      {
-        test: /\.(ogg|mp3|wav|mpe?g)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'assets/audio/[hash][ext]'
-        }
-      },
-      {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
       }
     ]
   }

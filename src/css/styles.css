@@ -1,18 +1,87 @@
-.content{
-  background-color:rgb(235, 228, 228);
-  max-width: 70em;
-  margin:auto;
-  color: rgb(0, 0, 0);
+
+body {
+  background: linear-gradient(rgb(50, 159, 248), rgb(248, 115, 115));
 }
 .container {
-  background-image: url(../assets/images/exchange.jpeg);
+  background: linear-gradient(rgb(0, 204, 255), rgb(23, 55, 80));
+  color: rgb(255, 255, 255);
+  max-width: 80%;
   text-align: center;
-  min-height: 20em;
+  padding: 0;
 }
-h1{
-  font-style: italic;
+.jumbotron{
+  position: relative;
+  width: 100%;
+  min-height: 20em;
+  background-image: url(../assets/images/exchange.jpeg);
+  margin-bottom: 4em;
+}
+.jumbotron h1{
+  position: absolute; 
+  top: calc(50% - 24px);
+  left: 0;
+  width: 100%;
+  text-shadow:rgb(68, 58, 58) 2px 2px; 
+}
+.display {
+  border: solid rgb(219, 219, 219) .5px;
+  border-radius: 5px;
+  padding: 2em;
+  width: 60em;
+  margin: auto;
+  margin-bottom: 4em;
 }
 select {
   min-width: 8em;
-  padding-left: .3em;
+  height:100%;
+}
+::placeholder{
+  color:black;
+}
+.results {
+  width: 367;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 2em;
+  color: black;
+}
+.output {
+  width: 100%;
+  padding: .2em;
+  background-color: white;
+}
+.btn {
+  width: 367;
+  margin: auto;
+  color: white;
+}
+.col-md-4{
+  margin-bottom: 2em;
+}
+.header{
+  border: solid rgb(224, 224, 224) .5px;
+  border-radius: 5px;
+  width: 60em;
+  height: 10em;
+  padding: 35px;
+  margin: auto;
+  font-style: italic;
+}
+.header > p {
+  margin-top: 10px;
+}
+.money-grid{
+  display:grid;
+  grid-template-columns: 30% 30% 40%;
+  margin-top: 3em;
+  padding: 2em;
+}
+#error{
+  font-weight: bold;
+}
+ul{
+  list-style-type: none;
+}
+.float {
+  float: left;
 }
